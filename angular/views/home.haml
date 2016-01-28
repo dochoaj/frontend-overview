@@ -1,0 +1,18 @@
+.container
+  .row
+    .col-md-12
+      %h1
+        {{ title }}
+
+  .row
+    .col-md-12
+      .input-group
+        %input.form-control{ name: 'newTask', ng-model: 'newTask', type: 'text' }
+        %span.input-group-btn
+          %button.btn.btn-primary{ type:'button', ng-click: 'addNewTask()' }
+            Add
+
+  .row.main-task-list
+    .col-md-12
+      .list-group
+        .list-group-item{ ng-repeat: "task in tasks track by $index", ng-include: "'views/task.html'" }

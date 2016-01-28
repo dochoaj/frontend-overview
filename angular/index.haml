@@ -1,0 +1,23 @@
+!!!
+%html.no-js{ng-app: "NestedTodo"}
+  %head
+    %title Angular Nested Todo App
+    %meta{charset: "utf-8"}
+    %meta{content: "IE=edge", http-equiv: "X-UA-Compatible"}
+    %meta{content: "", name: "description"}
+    %meta{content: "width=device-width, initial-scale=no", name: "viewport"}
+    %meta{content: "yes", name: "apple-mobile-web-app-capable"}
+    %link{href: "http://fonts.googleapis.com/css?family=Open+Sans:100,300,500", rel: "stylesheet", type: "text/css"}
+    %link{href: "../styles/vendor.min.css", rel: "stylesheet", type: "text/css"}
+    %link{href: "../styles/app.min.css", rel: "stylesheet", type: "text/css"}
+
+  %body
+    %nav.navbar.navbar-fixed-top.navbar-dark.bg-primary
+      %a.navbar-brand{href='#'}
+        Angular Nested Todo
+
+    #main
+      %ng-view
+
+  %script{src: '../scripts/angular-vendors.js'}
+  %script{src: 'scripts/app.js'}
