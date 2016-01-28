@@ -1,0 +1,21 @@
+{
+  "name": "frontend-overview",
+  "version": "0.0.0",
+  "authors": [
+    "Daniel Ochoa John <dochoaj@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-route": "^1.4.9",
+    "bootstrap": "v4.0.0-alpha.2",
+    "components-font-awesome": "^4.5.0"
+  }
+}

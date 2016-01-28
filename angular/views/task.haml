@@ -1,0 +1,16 @@
+.list-group-item-heading
+  %label
+    %form.form-inline
+      %label{ ng-class: "(task.completed) ? 'completed' : ''" }
+        %input.checkbox-inline{ type: 'checkbox', ng-model: "task.completed" }
+        &nbsp;
+        {{ task.title }}
+
+.list-group-item-text
+  .list-group{ ng-if: "task.tasks" }
+    .list-group-item{ ng-repeat: "task in task.tasks track by $index", ng-include: "'views/task.html'", }
+  .input-group
+    %input.form-control{ ng-model: "task.newTitle", type: 'text' }
+    %span.input-group-btn
+      %button.btn.btn-primary{ type:'button', ng-click: 'addSubTask(task)' }
+        Add
